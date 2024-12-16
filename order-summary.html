@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Order Summary</title>
+</head>
+<body>
+    <h2>Order Summary</h2>
+    <div id="orderDetails">
+    </div>
+    <br><br>
+
+    <p id="thankYouMessage"></p>
+
+    <a href="index.html" class="back-to-menu">Back to Menu</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const orderDetails = `
+                <p>Full Name: ${params.get("name")}</p>
+                <p>Email: ${params.get("email")}</p>
+                <p>Address: ${params.get("address")}</p>
+                <p>Size: ${params.get("size")}</p>
+                <p>Quantity: ${params.get("quantity")}</p>
+                <p>Delivery Option: ${params.get("delivery")}</p>
+                <p>Payment Method: ${params.get("payment")}</p>
+            `;
+            document.getElementById("orderDetails").innerHTML = orderDetails;
+
+            const thankYouMessage = "Thank you for your order! We will process it shortly.";
+            document.getElementById("thankYouMessage").textContent = thankYouMessage;
+        });
+    </script>
+</body>
+</html>

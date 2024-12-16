@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Clothing Order Form</title>
+</head>
+<body>
+
+    <h2>Clothing Order Form</h2>
+
+    <form id="orderForm" action="order-summary.html" method="GET">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="size">Size:</label>
+        <input type="radio" id="small" name="size" value="Small" required>
+        <label for="small">Small</label>
+        <input type="radio" id="medium" name="size" value="Medium">
+        <label for="medium">Medium</label>
+        <input type="radio" id="large" name="size" value="Large">
+        <label for="large">Large</label>
+        <input type="radio" id="xl" name="size" value="XL">
+        <label for="xl">XL</label><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+        <label for="delivery">Delivery Option:</label>
+        <select id="delivery" name="delivery" required>
+            <option value="Standard Delivery">Standard Delivery</option>
+            <option value="Express Delivery">Express Delivery</option>
+        </select><br><br>
+
+        <label>Payment Method:</label>
+        <input type="radio" id="COD" name="payment" value="Cash on Delivery" required>
+        <label for="COD">Cash on Delivery</label>
+        <input type="radio" id="Gcash" name="payment" value="Gcash">
+        <label for="Gcash">GCash</label><br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <br>
+
+    <a href="index.html" class="back-to-menu">Back to Menu</a>
+
+</body>
+</html>
